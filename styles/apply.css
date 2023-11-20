@@ -11,13 +11,23 @@ body {
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
 }
 
+.grid-2-colums {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.grid-3-colums-with-links {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/willemstad.jpeg");
@@ -64,14 +74,49 @@ header a {
   background: white;
   text-decoration: none;
 }
+main {
+  background-color: white;
+}
 
+main h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: darkgray;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: dimgray;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgb(110, 98, 98);
+  opacity: 0.7;
+}
+
+main img {
+  max-width: 100%;
+}
 footer {
   color: white;
   background-image: linear-gradient(rgba(1, 78, 99, 0.8), rgba(1, 78, 99, 0.9)),
     url("../images/flag.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h4 {
@@ -84,7 +129,6 @@ footer p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin: 0;
   opacity: 0.7;
 }
 
@@ -118,5 +162,14 @@ footer a {
 
   header h3 {
     font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+
+  section {
+    padding: 30px;
   }
 }
